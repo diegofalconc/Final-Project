@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<section>
+    <h2>{{ task.taskname }} has been deleted</h2>
+</section>
+
+<button class="taskButton">
+    <a href="{% url 'tasks' %}" >Return to List</a>
+</button>
+
+
+{%  endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<section>
+    <h2>Welcome to my To Do List</h2>
+    <p>
+        Click here and <a href="{% url 'tasks' %}">Make your list </a>to organize your activities.
+
+    </p>
+
+
+</section>
+
+
+
+<section>
+    <h2>Give me your feedback</h2>
+    <p>
+        Click here to for my <a href="{% url 'about' %}"> About Page</a> and let me know your feedback
+    </p>
+
+</section>
+
+{%  endblock %}

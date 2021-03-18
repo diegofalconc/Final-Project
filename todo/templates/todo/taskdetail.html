@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<section>
+    <h2>Tasks</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Priority</th>
+            <th>EntryDate</th>
+            <th>Task Description</th>
+    
+        </tr>
+        <tr>  
+            <td>{{ task.taskname }}</td> 
+            <td>{{ task.taskpriority }}</td> 
+            <td>{{ task.taskentrydate }}</td> 
+            <td>{{ task.taskdescription }}</td> 
+        </tr>
+
+    <table>
+        <button class="taskButton">
+            <a href="{% url 'tasks' %}" >Return to List</a>
+        </button>
+
+</section>
+
+
+
+
+{%  endblock %}

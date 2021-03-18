@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--This is a comment-->
+
+<section>
+    <h2>Tasks</h2>
+    <table>
+        <tr>
+            <th>Name (Click for detail)</th>
+            <th>Priority</th>
+            <th>Click to remove task</th>
+
+
+        </tr>
+        {% for t in task_list %}
+        <tr>  
+            <td><a href="{% url 'taskdetail' id=t.id%}">{{ t.taskname }}</a></td> 
+            <td>{{ t.taskpriority }}</td> 
+
+            <td><button ><a href="{% url 'delete'  id=t.id %}"> &#10004 </a></button></td>
+        </tr>
+        {% endfor %}
+
+    <table>
+
+        <button class="taskButton">
+            <a href="{% url 'newtask' %}" >Add Task</a>
+        </button>
+</section>
+
+
+
+
+{%  endblock %}
